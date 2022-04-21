@@ -10,6 +10,7 @@ using Microsoft.OpenApi.Models;
 using OpenIddict.Validation.AspNetCore;
 using ResourceServer.Repositories.Dapper;
 using ResourceServer.Repositories.Interfaces;
+using ResourceServer.Repositories.Memory;
 
 namespace ResourceServer;
 
@@ -132,7 +133,8 @@ public class Startup
 
         //HIER DEPENDECIES
         services.AddScoped<IDealRepository, DealRepository>();
-        services.AddScoped<IDealContext, DealContextDapper>();
+        //services.AddScoped<IDealContext, DealContextDapper>();
+        services.AddScoped<IDealContext, DealContextInMemory>();
     }
 
     public void Configure(IApplicationBuilder app)
