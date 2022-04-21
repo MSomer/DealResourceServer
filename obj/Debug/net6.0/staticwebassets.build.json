@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "nX2INXwPVOTDl9Znbit51uY4hArZrBQLFFMzjUl6Oqg=",
+  "Source": "ResourceServer",
+  "BasePath": "_content/ResourceServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ResourceServer\\wwwroot",
+      "Source": "ResourceServer",
+      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\",
+      "BasePath": "_content/ResourceServer",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\Index.html",
+      "SourceId": "ResourceServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\",
+      "BasePath": "_content/ResourceServer",
+      "RelativePath": "Index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Index.html"
+    }
+  ]
+}
