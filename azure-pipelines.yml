@@ -1,0 +1,36 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+#- main
+- none
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: CmdLine@2
+  inputs:
+    script: 'npm init --yes'
+  displayName: NPM init
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(Build.SourcesDirectory)/'
+  displayName: installing NPM packages
+  
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+  displayName: installing .net
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker registry'
+    repository: '429840/msomers'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
