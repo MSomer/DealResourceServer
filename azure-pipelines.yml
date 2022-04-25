@@ -21,7 +21,23 @@ steps:
     command: 'install'
     workingDir: '$(Build.SourcesDirectory)/'
   displayName: installing NPM packages
-  
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Sonarcloud'
+    organization: 'i441156'
+    scannerMode: 'MSBuild'
+    projectKey: 'I441156_DealResourceServer'
+    projectName: 'DealResourceServer'
+  displayName: Preparing SonarCloud
+- task: SonarCloudAnalyze@1
+  displayName: Analyzing 
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+  displayName: Publishing results
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
