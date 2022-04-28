@@ -8365,11 +8365,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\ResourceServer.csproj",
+      "projectUniqueName": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj",
       "projectName": "ResourceServer",
-      "projectPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\ResourceServer.csproj",
+      "projectPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj",
       "packagesPath": "C:\\Users\\Manoah Somers\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\obj\\",
+      "outputPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

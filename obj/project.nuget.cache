@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OBuh+4VfKOEQQAMFbGHbkE+XOyz72WA+E3BMlaoemNf0LfyLSc7Q+wTiY4J/Lis2RI7KRLz1O9OWj+PrwXc8LA==",
+  "dgSpecHash": "EhfDJhz3n7aUlI7QWSmK47lWJlT4rZqISjEUY4RllVfx7/lYjTeFfgFJ22GOYCWhPdCNAOZtfxIep0b7d9EU5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\ResourceServer.csproj",
+  "projectFilePath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

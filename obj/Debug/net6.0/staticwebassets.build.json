@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nX2INXwPVOTDl9Znbit51uY4hArZrBQLFFMzjUl6Oqg=",
+  "Hash": "9CfslzmNXCfWDSIbJJEOQIEg4JWa+U2faIBFEhsYt8c=",
   "Source": "ResourceServer",
   "BasePath": "_content/ResourceServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ResourceServer\\wwwroot",
       "Source": "ResourceServer",
-      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\wwwroot\\",
       "BasePath": "_content/ResourceServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\Index.html",
+      "Identity": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\wwwroot\\Index.html",
       "SourceId": "ResourceServer",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6Project\\ResourceServer\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\wwwroot\\",
       "BasePath": "_content/ResourceServer",
       "RelativePath": "Index.html",
       "AssetKind": "All",

@@ -133,8 +133,8 @@ public class Startup
 
         //HIER DEPENDECIES
         services.AddScoped<IDealRepository, DealRepository>();
-        //services.AddScoped<IDealContext, DealContextDapper>();
-        services.AddScoped<IDealContext, DealContextInMemory>();
+        services.AddScoped<IDealContext, DealContextDapper>();
+        //services.AddScoped<IDealContext, DealContextInMemory>();
     }
 
     public void Configure(IApplicationBuilder app)
