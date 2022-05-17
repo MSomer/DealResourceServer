@@ -69,7 +69,7 @@ namespace ResourceServer.Repositories.Dapper
             }
         }
 
-        public async Task<Deal> UpdateDeal(int id, DealDto deal)
+        public async Task<Deal> UpdateDeal(int id, Deal deal)
         {
             var query = "UPDATE Deals SET ProductId = @ProductId, Name = @Name, Description = @Description, ProductName = @ProductName, OldPrice = @OldPrice, NewPrice = @NewPrice, ProductLink = @ProductLink, Timestamp = @Timestamp WHERE Id = @Id";
             
@@ -82,6 +82,7 @@ namespace ResourceServer.Repositories.Dapper
             parameters.Add("NewPrice", deal.NewPrice, DbType.Int64);
             parameters.Add("ProductLink", deal.ProductLink, DbType.String);
             parameters.Add("Timestamp", deal.Timestamp, DbType.String);
+            parameters.Add("Id", deal.Id, DbType.Int64);
 
             using (var connection = dapperContext.CreateConnection())
             {

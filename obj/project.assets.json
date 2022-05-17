@@ -20,6 +20,21 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.JsonPatch/6.0.3": {
         "type": "package",
         "dependencies": {
@@ -715,6 +730,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Polly.Extensions.Http.dll": {}
+        }
+      },
+      "RabbitMQ.Client/6.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -2434,6 +2462,15 @@
           "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
+      "System.Threading.Channels/4.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        }
+      },
       "System.Threading.Tasks/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2603,6 +2640,21 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+      "sha512": "joDS3+lD1i9qcdFLWP4D316t3bHpezmTNOzbMIf9ZcRPX4QTuiUutZcQn/kZplf3BiLHqwUChZXxPjCAMKaKAQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.JsonPatch/6.0.3": {
@@ -3641,6 +3693,22 @@
         "lib/netstandard2.0/Polly.Extensions.Http.xml",
         "polly.extensions.http.3.0.0.nupkg.sha512",
         "polly.extensions.http.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/6.3.0": {
+      "sha512": "aKDH8lyNIRkouDvJJD3xd6222z6qCK8+Lyb/lRQRO1QxN7hsTgPWtkezMmXmA7t1NsDLUwIWEJj8xYQtMt0tnQ==",
+      "type": "package",
+      "path": "rabbitmq.client/6.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net461/RabbitMQ.Client.dll",
+        "lib/net461/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.3.0.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
@@ -7949,6 +8017,30 @@
         "system.threading.nuspec"
       ]
     },
+    "System.Threading.Channels/4.7.1": {
+      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "type": "package",
+      "path": "system.threading.channels/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
+        "lib/netcoreapp3.0/System.Threading.Channels.dll",
+        "lib/netcoreapp3.0/System.Threading.Channels.xml",
+        "lib/netstandard1.3/System.Threading.Channels.dll",
+        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "system.threading.channels.4.7.1.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -8343,12 +8435,14 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Dapper >= 2.0.123",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.4",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.3",
       "Microsoft.IdentityModel.Clients.ActiveDirectory >= 5.2.9",
       "OpenIddict.Validation.AspNetCore >= 3.1.1",
       "OpenIddict.Validation.SystemNetHttp >= 3.1.1",
+      "RabbitMQ.Client >= 6.3.0",
       "Serilog >= 2.10.0",
       "Serilog.AspNetCore >= 5.0.0",
       "Serilog.Sinks.Console >= 4.0.1",
@@ -8407,6 +8501,10 @@
             "target": "Package",
             "version": "[2.0.123, )"
           },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[6.0.4, )"
+          },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",
             "version": "[6.0.3, )"
@@ -8432,6 +8530,10 @@
           "OpenIddict.Validation.SystemNetHttp": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[6.3.0, )"
           },
           "Serilog": {
             "target": "Package",
@@ -8476,7 +8578,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

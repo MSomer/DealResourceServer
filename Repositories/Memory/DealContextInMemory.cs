@@ -26,7 +26,7 @@ namespace ResourceServer.Repositories.Memory
             throw new System.NotImplementedException();
         }
 
-        public Task<Deal> UpdateDeal(int id, DealDto deal)
+        public Task<Deal> UpdateDeal(int id, Deal deal)
         {
             throw new System.NotImplementedException();
         }

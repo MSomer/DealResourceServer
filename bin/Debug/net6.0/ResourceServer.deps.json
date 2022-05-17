@@ -9,12 +9,14 @@
       "ResourceServer/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.4",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.3",
           "Microsoft.IdentityModel.Clients.ActiveDirectory": "5.2.9",
           "OpenIddict.Validation.AspNetCore": "3.1.1",
           "OpenIddict.Validation.SystemNetHttp": "3.1.1",
+          "RabbitMQ.Client": "6.3.0",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "5.0.0",
           "Serilog.Sinks.Console": "4.0.1",
@@ -39,6 +41,17 @@
           "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.11.1"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "6.0.4.0",
+            "fileVersion": "6.0.422.17204"
           }
         }
       },
@@ -511,6 +524,18 @@
           "lib/netstandard2.0/Polly.Extensions.Http.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "RabbitMQ.Client/6.3.0": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.3.0.0"
           }
         }
       },
@@ -1547,6 +1572,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.7.1": {},
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1659,6 +1685,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-joDS3+lD1i9qcdFLWP4D316t3bHpezmTNOzbMIf9ZcRPX4QTuiUutZcQn/kZplf3BiLHqwUChZXxPjCAMKaKAQ==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.4",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/6.0.3": {
       "type": "package",
@@ -2009,6 +2042,13 @@
       "sha512": "sha512-drrG+hB3pYFY7w1c3BD+lSGYvH2oIclH8GRSehgfyP5kjnFnHKQuuBhuHLv+PWyFuaTDyk/vfRpnxOzd11+J8g==",
       "path": "polly.extensions.http/3.0.0",
       "hashPath": "polly.extensions.http.3.0.0.nupkg.sha512"
+    },
+    "RabbitMQ.Client/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aKDH8lyNIRkouDvJJD3xd6222z6qCK8+Lyb/lRQRO1QxN7hsTgPWtkezMmXmA7t1NsDLUwIWEJj8xYQtMt0tnQ==",
+      "path": "rabbitmq.client/6.3.0",
+      "hashPath": "rabbitmq.client.6.3.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -2765,6 +2805,13 @@
       "sha512": "sha512-VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",

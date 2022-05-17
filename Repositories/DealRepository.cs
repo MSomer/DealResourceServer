@@ -1,5 +1,6 @@
 ﻿using ResourceServer.Model.Deal;
 using ResourceServer.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -24,10 +25,11 @@ namespace ResourceServer.Repositories
         }
         public async Task<Deal> createDeal(DealDto deal)
         {
+            deal.Timestamp = DateTime.Now.ToString();
             return await dealContext.createDeal(deal);
         }
 
-        public async Task<Deal> UpdateDeal(int id, DealDto deal)
+        public async Task<Deal> UpdateDeal(int id, Deal deal)
         {
             return await dealContext.UpdateDeal(id, deal);
         }

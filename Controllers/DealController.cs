@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ResourceServer.Model.Deal;
 using ResourceServer.Repositories.Interfaces;
@@ -10,7 +9,7 @@ namespace ResourceServer.Controllers
 {
     [Route("api/[controller]")]
     //TODO deze naam veranderen
-    //[Authorize("dataEventRecordsPolicy")]
+    [Authorize("dataEventRecordsPolicy")]
     //[Authorize(Roles = "admin")]
     [ApiController]
     public class DealController : ControllerBase
@@ -65,9 +64,10 @@ namespace ResourceServer.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
         [HttpPut("{id}")]
         [Authorize(Roles = "admin")]
-        public async Task<IActionResult> UpdateDeal(int id, DealDto deal)
+        public async Task<IActionResult> UpdateDeal(int id, Deal deal)
         {
             try
             {

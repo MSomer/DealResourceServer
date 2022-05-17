@@ -11,6 +11,8 @@ using OpenIddict.Validation.AspNetCore;
 using ResourceServer.Repositories.Dapper;
 using ResourceServer.Repositories.Interfaces;
 using ResourceServer.Repositories.Memory;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using ResourceServer.Producer;
 
 namespace ResourceServer;
 
@@ -91,25 +93,25 @@ public class Startup
         services.AddSwaggerGen(c =>
         {
             // add JWT Authentication
-            //var securityScheme = new OpenApiSecurityScheme
-            //{
-            //    Name = "JWT Authentication",
-            //    Description = "Enter JWT Bearer token **_only_**",
-            //    In = ParameterLocation.Header,
-            //    Type = SecuritySchemeType.Http,
-            //    Scheme = "bearer", // must be lower case
-            //    BearerFormat = "JWT",
-            //    Reference = new OpenApiReference
-            //    {
-            //        Id = JwtBearerDefaults.AuthenticationScheme,
-            //        Type = ReferenceType.SecurityScheme
-            //    }
-            //};
-            //c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
-            //c.AddSecurityRequirement(new OpenApiSecurityRequirement
-            //{
-            //    {securityScheme, new string[] { }}
-            //});
+            var securityScheme = new OpenApiSecurityScheme
+            {
+                Name = "JWT Authentication",
+                Description = "Enter JWT Bearer token **_only_**",
+                In = ParameterLocation.Header,
+                Type = SecuritySchemeType.Http,
+                Scheme = "bearer", // must be lower case
+                BearerFormat = "JWT",
+                Reference = new OpenApiReference
+                {
+                    Id = JwtBearerDefaults.AuthenticationScheme,
+                    Type = ReferenceType.SecurityScheme
+                }
+            };
+            c.AddSecurityDefinition(securityScheme.Reference.Id, securityScheme);
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {securityScheme, new string[] { }}
+            });
 
             c.SwaggerDoc("v1", new OpenApiInfo
             {
@@ -134,6 +136,7 @@ public class Startup
         //HIER DEPENDECIES
         services.AddScoped<IDealRepository, DealRepository>();
         services.AddScoped<IDealContext, DealContextDapper>();
+        services.AddScoped<IMessageProducer, RabbitMQProducer>();
         //services.AddScoped<IDealContext, DealContextInMemory>();
     }
 
