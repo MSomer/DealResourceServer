@@ -5,15 +5,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Migrations\**" />
+    <Compile Remove="UnitTestProjectResourceServer\**" />
     <Content Remove="Migrations\**" />
+    <Content Remove="UnitTestProjectResourceServer\**" />
     <EmbeddedResource Remove="Migrations\**" />
+    <EmbeddedResource Remove="UnitTestProjectResourceServer\**" />
     <None Remove="Migrations\**" />
+    <None Remove="UnitTestProjectResourceServer\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.10" />
     <PackageReference Include="OpenIddict.Validation.AspNetCore" Version="3.1.1" />
     <PackageReference Include="OpenIddict.Validation.SystemNetHttp" Version="3.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
@@ -35,5 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests\" />
   </ItemGroup>
 </Project>

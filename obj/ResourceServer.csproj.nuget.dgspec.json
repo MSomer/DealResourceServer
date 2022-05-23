@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj": {}
+    "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\ResourceServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj": {
+    "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\ResourceServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj",
+        "projectUniqueName": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\ResourceServer.csproj",
         "projectName": "ResourceServer",
-        "projectPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\ResourceServer.csproj",
+        "projectPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\ResourceServer.csproj",
         "packagesPath": "C:\\Users\\Manoah Somers\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\S6-Project-code\\S6ProjectAzure\\DealResourceServer\\obj\\",
+        "outputPath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Manoah Somers\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +47,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -126,7 +129,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
