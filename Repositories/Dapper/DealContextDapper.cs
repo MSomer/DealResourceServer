@@ -38,7 +38,7 @@ namespace ResourceServer.Repositories.Dapper
         }
         public async Task<Deal> createDeal(DealDto deal)
         {
-            var query = "INSERT INTO Deals (ProductId, Name, Description, ProductName, OldPrice, NewPrice, ProductLink, Timestamp) VALUES (@ProductId, @Name, @Description, @ProductName, @OldPrice, @NewPrice, @ProductLink, @Timestamp)";
+            var query = "INSERT INTO Deals (ProductId, Name, Description, ProductName, OldPrice, NewPrice, ProductLink, Timestamp, ProductImage) VALUES (@ProductId, @Name, @Description, @ProductName, @OldPrice, @NewPrice, @ProductLink, @Timestamp, @ProductImage)";
             
             var parameters = new DynamicParameters();
             parameters.Add("ProductId", deal.ProductId, DbType.Int64);
@@ -49,6 +49,7 @@ namespace ResourceServer.Repositories.Dapper
             parameters.Add("NewPrice", deal.NewPrice, DbType.Int64);
             parameters.Add("ProductLink", deal.ProductLink, DbType.String);
             parameters.Add("Timestamp", deal.Timestamp, DbType.String);
+            parameters.Add("ProductImage", deal.ProductImage, DbType.String);
 
             using (var connection = dapperContext.CreateConnection())
             {
@@ -64,6 +65,7 @@ namespace ResourceServer.Repositories.Dapper
                     NewPrice = deal.NewPrice,
                     ProductLink = deal.ProductLink,
                     Timestamp = deal.Timestamp,
+                    ProductImage = deal.ProductImage,
                 };
                 return createdDeal;
             }
@@ -71,7 +73,7 @@ namespace ResourceServer.Repositories.Dapper
 
         public async Task<Deal> UpdateDeal(int id, Deal deal)
         {
-            var query = "UPDATE Deals SET ProductId = @ProductId, Name = @Name, Description = @Description, ProductName = @ProductName, OldPrice = @OldPrice, NewPrice = @NewPrice, ProductLink = @ProductLink, Timestamp = @Timestamp WHERE Id = @Id";
+            var query = "UPDATE Deals SET ProductId = @ProductId, Name = @Name, Description = @Description, ProductName = @ProductName, OldPrice = @OldPrice, NewPrice = @NewPrice, ProductLink = @ProductLink, Timestamp = @Timestamp, ProductImage = @ProductImage WHERE Id = @Id";
             
             var parameters = new DynamicParameters();
             parameters.Add("ProductId", deal.ProductId, DbType.Int64);
@@ -82,6 +84,7 @@ namespace ResourceServer.Repositories.Dapper
             parameters.Add("NewPrice", deal.NewPrice, DbType.Int64);
             parameters.Add("ProductLink", deal.ProductLink, DbType.String);
             parameters.Add("Timestamp", deal.Timestamp, DbType.String);
+            parameters.Add("ProductImage", deal.Id, DbType.String);
             parameters.Add("Id", deal.Id, DbType.Int64);
 
             using (var connection = dapperContext.CreateConnection())
@@ -98,6 +101,7 @@ namespace ResourceServer.Repositories.Dapper
                     NewPrice = deal.NewPrice,
                     ProductLink = deal.ProductLink,
                     Timestamp = deal.Timestamp,
+                    ProductImage = deal.ProductImage,
                 };
                 return UpdatedDeal;
             }

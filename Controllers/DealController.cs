@@ -50,6 +50,7 @@ namespace ResourceServer.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateDeal(DealDto deal)
         {

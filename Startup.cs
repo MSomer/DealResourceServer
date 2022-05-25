@@ -64,9 +64,9 @@ public class Startup
             {
                 // Note: the validation handler uses OpenID Connect discovery
                 // to retrieve the address of the introspection endpoint.
-                //options.SetIssuer("https://localhost:44395/");
+                options.SetIssuer("https://localhost:44395/");
                 //Voor docker
-                options.SetIssuer("https://host.docker.internal:44395/");
+                //options.SetIssuer("https://host.docker.internal:44395/");
 
                 options.AddAudiences("rs_dataEventRecordsApi");
 

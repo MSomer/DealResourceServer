@@ -10,5 +10,6 @@
         public long NewPrice { get; set; }
         public string ProductLink { get; set; } = string.Empty;
         public string Timestamp { get; set; } = string.Empty;
+        public string ProductImage { get; set; } = string.Empty;
     }
 }

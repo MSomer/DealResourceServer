@@ -12,5 +12,6 @@
         public string ProductLink { get; set; } = string.Empty;
         public long Rating { get; set; }
         public string Timestamp { get; set; } = string.Empty;
+        public string ProductImage { get; set; } = string.Empty;
     }
 }
