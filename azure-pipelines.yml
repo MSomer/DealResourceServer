@@ -22,34 +22,41 @@ steps:
     workingDir: '$(Build.SourcesDirectory)/'
   displayName: installing NPM packages
 
-#- task: SonarCloudPrepare@1
-#  inputs:
-#    SonarCloud: 'Sonarcloud'
-#    organization: 'i441156'
-#    scannerMode: 'MSBuild'
-#    projectKey: 'I441156_DealResourceServer'
-#    projectName: 'DealResourceServer'
-#  displayName: Preparing SonarCloud
-#- task: SonarCloudAnalyze@1
-#  displayName: Analyzing 
-
-#- task: SonarCloudPublish@1
-#  inputs:
-#    pollingTimeoutSec: '300'
-#  displayName: Publishing results
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Sonarcloud'
+    organization: 'i441156'
+    scannerMode: 'MSBuild'
+    projectKey: 'I441156_DealResourceServer'
+    projectName: 'DealResourceServer'
+    extraProperties: |
+     sonar.exclusions=**/obj/**,**/*.dll
+     sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+     sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+  displayName: Preparing SonarCloud
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/*.csproj'
-  displayName: installing .net
+  displayName: Building project
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
     projects: '**/*.csproj'
-    arguments: '--collect "Code Coverage"'
+    arguments: '--configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx'
+    #arguments: '--collect "Code Coverage"'
     testRunTitle: 'All tests'
+  displayName: Testing project
+- task: SonarCloudAnalyze@1
+  displayName: Analyzing 
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+  displayName: Publishing results
+
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker registry'

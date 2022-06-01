@@ -13,6 +13,7 @@
           "Microsoft.NET.Test.Sdk": "17.1.0",
           "ResourceServer": "1.0.0",
           "coverlet.collector": "3.1.2",
+          "coverlet.msbuild": "3.1.2",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
@@ -20,6 +21,7 @@
         }
       },
       "coverlet.collector/3.1.2": {},
+      "coverlet.msbuild/3.1.2": {},
       "Dapper/2.0.123": {
         "runtime": {
           "lib/net5.0/Dapper.dll": {
@@ -1982,6 +1984,13 @@
       "sha512": "sha512-wuLDIDKD5XMt0A7lE31JPenT7QQwZPFkP5rRpdJeblyXZ9MGLI8rYjvm5fvAKln+2/X+4IxxQDxBtwdrqKNLZw==",
       "path": "coverlet.collector/3.1.2",
       "hashPath": "coverlet.collector.3.1.2.nupkg.sha512"
+    },
+    "coverlet.msbuild/3.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QhM0fnDtmIMImY7oxyQ/kh1VYtRxPyRVeLwRUGuUvI6Xp83pSYG9gerK8WgJj4TzUl7ISziADUGtIWKhtlbkbQ==",
+      "path": "coverlet.msbuild/3.1.2",
+      "hashPath": "coverlet.msbuild.3.1.2.nupkg.sha512"
     },
     "Dapper/2.0.123": {
       "type": "package",

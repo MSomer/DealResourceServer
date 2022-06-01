@@ -84,7 +84,7 @@ namespace ResourceServer.Repositories.Dapper
             parameters.Add("NewPrice", deal.NewPrice, DbType.Int64);
             parameters.Add("ProductLink", deal.ProductLink, DbType.String);
             parameters.Add("Timestamp", deal.Timestamp, DbType.String);
-            parameters.Add("ProductImage", deal.Id, DbType.String);
+            parameters.Add("ProductImage", deal.ProductImage, DbType.String);
             parameters.Add("Id", deal.Id, DbType.Int64);
 
             using (var connection = dapperContext.CreateConnection())

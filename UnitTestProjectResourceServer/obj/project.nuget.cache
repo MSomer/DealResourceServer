@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "POo3I2DhF5PXGEwxlzRoRtDoJup3g0XAMEUnO11Kdy30hR/zOhahGnT9meyR5yNwTAOKqx77DGKYibOIc5NAHQ==",
+  "dgSpecHash": "xtIR+Z7HvWqflI1rHVgTEexH+5feWjWjDInalRPs96TY0kjZuVZPWJXQA2xntiQB6kgqit6rxJ4CWI6kgybxQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Manoah Somers\\Documents\\Fontys\\Semester 6\\Individueel project\\Project code s6\\DealResourceServer\\UnitTestProjectResourceServer\\UnitTestProjectResourceServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\Manoah Somers\\.nuget\\packages\\coverlet.msbuild\\3.1.2\\coverlet.msbuild.3.1.2.nupkg.sha512",
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.4\\microsoft.aspnetcore.authentication.jwtbearer.6.0.4.nupkg.sha512",
     "C:\\Users\\Manoah Somers\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.3\\microsoft.aspnetcore.jsonpatch.6.0.3.nupkg.sha512",
