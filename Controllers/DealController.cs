@@ -9,7 +9,7 @@ namespace ResourceServer.Controllers
 {
     [Route("api/[controller]")]
     //TODO deze naam veranderen
-    [Authorize("dataEventRecordsPolicy")]
+    //[Authorize("dataEventRecordsPolicy")]
     //[Authorize(Roles = "admin")]
     [ApiController]
     public class DealController : ControllerBase
@@ -67,7 +67,7 @@ namespace ResourceServer.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateDeal(int id, Deal deal)
         {
             try
@@ -85,7 +85,7 @@ namespace ResourceServer.Controllers
             }
         }
         [HttpDelete("{id}")]
-        [Authorize(Roles = "admin")]
+        //[Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteDeal(int id)
         {
             try

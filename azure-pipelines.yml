@@ -8,7 +8,8 @@ trigger:
 - none
 
 pool:
-  vmImage: ubuntu-latest
+  #vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
 - task: CmdLine@2
@@ -22,6 +23,11 @@ steps:
     workingDir: '$(Build.SourcesDirectory)/'
   displayName: installing NPM packages
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+    feedsToUse: 'select'
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'Sonarcloud'
@@ -30,9 +36,8 @@ steps:
     projectKey: 'I441156_DealResourceServer'
     projectName: 'DealResourceServer'
     extraProperties: |
-     sonar.exclusions=**/obj/**,**/*.dll
-     sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
-     sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
+     sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)\**\opencover.xml
+     sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)\**\*.trx
   displayName: Preparing SonarCloud
 
 - task: DotNetCoreCLI@2
@@ -44,9 +49,11 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
+    #projects: 'UnitTestProjectResourceServer/**/*.csproj'
     projects: '**/*.csproj'
-    arguments: '--configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx'
-    #arguments: '--collect "Code Coverage"'
+    #arguments: '--configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx'
+    #arguments: '--blame --no-restore --verbosity normal --logger "trx;LogFileName=testResults.trx" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=opencover.xml'
+    arguments: '--collect "Code Coverage"'
     testRunTitle: 'All tests'
   displayName: Testing project
 - task: SonarCloudAnalyze@1
