@@ -8,8 +8,8 @@ trigger:
 - none
 
 pool:
-  #vmImage: ubuntu-latest
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
+  #vmImage: windows-latest
 
 steps:
 - task: CmdLine@2
@@ -67,6 +67,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker registry'
-    repository: 'msomers/semester6'
+    repository: 'msomers/dealresourceserver'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
